@@ -1,3 +1,4 @@
+import FriendsList from "./FriendsList";
 const FriendsPanel = () => {
   return (
     <div className="bg-gray-950 text-white text-sm  border-r border-gray-800  col-span-1  ">
@@ -18,7 +19,7 @@ const FriendsPanel = () => {
             fill="none"
           >
             <title>business-advertise-outline</title>
-            {/* <g clip-path="url(#clip0_49_15701)"> */}
+
             <path
               d="M18.9999 11C18.4476 11 18 11.4477 18 12C18 12.5523 18.4476 13 18.9999 13C19.6495 13 20.342 13 21.0001 13C21.5523 13 22 12.5523 22 12C22 11.4477 21.5523 11 21.0001 11C20.342 11 19.6495 11 18.9999 11Z"
               fill="currentColor"
@@ -210,6 +211,7 @@ const FriendsPanel = () => {
           </div>
         </form>
       </div>
+      <FriendsList />
     </div>
   );
 };
