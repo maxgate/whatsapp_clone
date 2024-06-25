@@ -2,21 +2,95 @@ export const friends = [
   {
     name: "Max vincent",
     image:
-      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "	https://img.freepik.com/free-photo/3d-illustration-teenager-with-funny-face-glasses_1142-50955.jpg",
+    message: "i love you",
+    id: 196,
+  },
+
+  {
+    name: "Joy mike",
+    image:
+      "https://t3.ftcdn.net/jpg/06/17/13/26/240_F_617132669_YptvM7fIuczaUbYYpMe3VTLimwZwzlWf.jpg",
+    message: "how are you doing dear",
+    id: 129,
   },
   {
     name: "Mark James",
     image:
-      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-  },
-  {
-    name: "Joy mike",
-    image:
-      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "https://img.freepik.com/premium-photo/cartoon-character-with-blue-shirt-glasses_561641-2084.jpg",
+    message: "i miss you so much",
+    id: 134,
   },
   {
     name: "Jessica Laura",
     image:
-      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "https://t4.ftcdn.net/jpg/08/23/95/89/240_F_823958944_1c9covIC7Tl7eyJtWoTiXc0L4vP6f43q.jpg",
+    message: "hope you are still coming to my house",
+    id: 123,
+  },
+  {
+    name: "Max vincent",
+    image:
+      "	https://img.freepik.com/free-photo/3d-illustration-teenager-with-funny-face-glasses_1142-50955.jpg",
+    message: "i love you",
+    id: 196,
+  },
+
+  {
+    name: "Joy mike",
+    image:
+      "https://t3.ftcdn.net/jpg/06/17/13/26/240_F_617132669_YptvM7fIuczaUbYYpMe3VTLimwZwzlWf.jpg",
+    message: "how are you doing dear",
+    id: 129,
+  },
+  {
+    name: "Mark James",
+    image:
+      "https://img.freepik.com/premium-photo/cartoon-character-with-blue-shirt-glasses_561641-2084.jpg",
+    message: "i miss you so much",
+    id: 134,
+  },
+  {
+    name: "Jessica Laura",
+    image:
+      "https://t4.ftcdn.net/jpg/08/23/95/89/240_F_823958944_1c9covIC7Tl7eyJtWoTiXc0L4vP6f43q.jpg",
+    message: "hope you are still coming to my house",
+    id: 123,
+  },
+  {
+    name: "Jessica Laura",
+    image:
+      "https://t4.ftcdn.net/jpg/08/23/95/89/240_F_823958944_1c9covIC7Tl7eyJtWoTiXc0L4vP6f43q.jpg",
+    message: "hope you are still coming to my house",
+    id: 123,
+  },
+  {
+    name: "Max vincent",
+    image:
+      "	https://img.freepik.com/free-photo/3d-illustration-teenager-with-funny-face-glasses_1142-50955.jpg",
+    message: "i love you",
+    id: 196,
+  },
+
+  {
+    name: "Joy mike",
+    image:
+      "https://t3.ftcdn.net/jpg/06/17/13/26/240_F_617132669_YptvM7fIuczaUbYYpMe3VTLimwZwzlWf.jpg",
+    message: "how are you doing dear",
+    id: 129,
+  },
+  {
+    name: "Mark James",
+    image:
+      "https://img.freepik.com/premium-photo/cartoon-character-with-blue-shirt-glasses_561641-2084.jpg",
+    message: "i miss you so much",
+    id: 134,
+  },
+  {
+    name: "Jessica Laura",
+    image:
+      "https://t4.ftcdn.net/jpg/08/23/95/89/240_F_823958944_1c9covIC7Tl7eyJtWoTiXc0L4vP6f43q.jpg",
+    message: "hope you are still coming to my house",
+    id: 123,
   },
 ];

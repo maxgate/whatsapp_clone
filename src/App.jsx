@@ -3,7 +3,7 @@ import FriendsPanel from "./FriendsPanel";
 
 const App = () => {
   return (
-    <div className=" grid grid-cols-3">
+    <div className=" grid grid-cols-3 ">
       <FriendsPanel />
       <ChatPanel />
     </div>
