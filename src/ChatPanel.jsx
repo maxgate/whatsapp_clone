@@ -1,6 +1,6 @@
 const Background = () => {
   return (
-    <div className="bg-gray-900 text-white text-sm box-border  lg:w-full md:w-full sm:w-40  col-span-2 ">
+    <div className="bg-gray-900 text-white text-sm box-border  lg:w-full md:w-full h-lvh  sm:w-40  col-span-2 ">
       <div className="  mx-72  pt-36 ">
         <svg
           viewBox="0 0 303 172"
