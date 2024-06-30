@@ -7,16 +7,16 @@ import { IoMdMail } from "react-icons/io";
 
 
 // import coverpix from "./assets/maxgate.png";
-const Profile = () => {
+const Profile = ({handleClick}) => {
   return (
     <div className="bg-gray-900 text-white text-sm  border-r border-gray-800 h-screen col-span-1 overflow-auto">
-      <div className="text-gray-200 font-semibold  text-xl pt-16 flex">
-        <span className="pt-2 mx-8">
-          <GoArrowLeft className="cursor-pointer text-2xl text-white font-bold" />
+      <div className="text-gray-200 font-semibold  text-xl pt-16 flex fixed bg-gray-900 w-full top-0">
+        <span className="mx-8">
+          <GoArrowLeft className="cursor-pointer text-2xl text-white font-bold" onClick={handleClick} />
         </span>
         Profile
       </div>
-      <div className=" bg-gray-950 h-48 mt-4 ">
+      <div className=" bg-gray-950 h-48 mt-20 ">
         <div className="bg-cover-picture h-60 w-full cursor-pointer">
           <div className=" pt-32  flex">
             <img

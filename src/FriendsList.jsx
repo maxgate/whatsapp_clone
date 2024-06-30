@@ -3,18 +3,6 @@ import { friends } from "./friends/friends";
 const FriendsList = () => {
   return (
     <div className="pt-24">
-      {/* <div className="flex  border-b border-gray-900 hover:bg-gray-600 rounded-sm px-2 py-3">
-        <img
-          src={profilepix}
-          alt="friends name"
-          className="rounded-full h-12"
-        />
-        <div className="flex flex-col  ">
-          <h3 className="text-center text-gray-400 text-xl font-semibold">Max vincent</h3>
-          <h2 className="ml-12  text-gray-400 ">hope you are doing well</h2>
-        </div>
-      </div> */}
-
       {friends.map((friend) => (
         <div
           className="flex border-b border-gray-900 hover:bg-gray-600 rounded-sm px-2 py-3"
