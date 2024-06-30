@@ -1,8 +1,12 @@
 import propTypes from "prop-types";
 // import { useFriends } from "./context/FriendsContext";
 import FriendsList from "./FriendsList";
-const FriendsPanel = ({ handleClick }) => {
-  // const { dispatch, status } = useFriends();
+import { useContext } from "react";
+import { FriendsContext } from "./App";
+const FriendsPanel = () => {
+  
+  const { handleFriendsClick } = useContext(FriendsContext);
+
   return (
     <div className="bg-gray-950 text-white text-sm  border-r border-gray-800 h-screen col-span-1 overflow-auto ">
       <div className="fixed w-1/3  top-0 left-0   bg-black ">
@@ -12,7 +16,7 @@ const FriendsPanel = ({ handleClick }) => {
             alt=" profile picture"
             className="rounded-full h-10"
             // onClick={() => dispatch({ type: "profile" })}
-            onClick={handleClick}
+            onClick={handleFriendsClick}
           />
 
           <div className="px-20 py-2 flex gap-7">
@@ -224,7 +228,7 @@ const FriendsPanel = ({ handleClick }) => {
 };
 
 FriendsPanel.propTypes = {
-  handleClick: propTypes.bool,
+  onhandleClick: propTypes.bool,
 };
 
 export default FriendsPanel;

@@ -1,18 +1,23 @@
+import propTypes from "prop-types";
 import { GoArrowLeft } from "react-icons/go";
 import { RiPencilFill } from "react-icons/ri";
 import { FaAddressCard } from "react-icons/fa6";
 import { MdOutlinePayments } from "react-icons/md";
 import { FaTag } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import { useContext } from "react";
+import { FriendsContext } from "./App";
 
-
-// import coverpix from "./assets/maxgate.png";
-const Profile = ({handleClick}) => {
+const Profile = () => {
+  const { handleProfileClick } = useContext(FriendsContext);
   return (
     <div className="bg-gray-900 text-white text-sm  border-r border-gray-800 h-screen col-span-1 overflow-auto">
       <div className="text-gray-200 font-semibold  text-xl pt-16 flex fixed bg-gray-900 w-full top-0">
         <span className="mx-8">
-          <GoArrowLeft className="cursor-pointer text-2xl text-white font-bold" onClick={handleClick} />
+          <GoArrowLeft
+            className="cursor-pointer text-2xl text-white font-bold"
+            onClick={handleProfileClick}
+          />
         </span>
         Profile
       </div>
@@ -67,6 +72,10 @@ const Profile = ({handleClick}) => {
       </div>
     </div>
   );
+};
+
+Profile.propTypes = {
+  onhandleClick: propTypes.bool,
 };
 
 export default Profile;

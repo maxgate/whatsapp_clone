@@ -4,9 +4,11 @@ import ChatPanel from "./ChatPanel";
 import FriendsPanel from "./FriendsPanel";
 import Profile from "./Profile";
 // import Loader from "./Loader";
-import { useState } from "react";
+import { createContext, useState } from "react";
 
-function App() {
+export const FriendsContext = createContext();
+
+export default function App() {
   // const { status } = useFriends();
   const [profile, setProfile] = useState(false);
   const [friendsPanel, setFriendsPanel] = useState(true);
@@ -22,18 +24,21 @@ function App() {
   }
 
   return (
-    <>
+    <FriendsContext.Provider
+      value={{
+        handleProfileClick: handleProfile,
+        handleFriendsClick: handleFriendsPanel,
+      }}
+    >
       {/* { <Loader />} */}
 
       <div className=" grid grid-cols-3 ">
         <div>
-          {profile && <Profile handleClick={handleFriendsPanel} />}
-          {friendsPanel && <FriendsPanel handleClick={handleProfile} />}
+          {profile && <Profile />}
+          {friendsPanel && <FriendsPanel />}
         </div>
         {<ChatPanel />}
       </div>
-    </>
+    </FriendsContext.Provider>
   );
 }
-
-export default App;
