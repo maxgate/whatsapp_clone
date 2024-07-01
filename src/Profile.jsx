@@ -25,7 +25,7 @@ const Profile = () => {
         <div className="bg-cover-picture h-60 w-full cursor-pointer">
           <div className=" pt-32  flex">
             <img
-              src="src/assets/profile.png"
+              src="../profile.png"
               alt="cover pix"
               className=" rounded-full h-36 mx-auto cursor-pointer "
             />
