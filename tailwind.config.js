@@ -11,8 +11,7 @@ export default {
     },
     extend: {
       backgroundImage: {
-        "cover-picture": "url('src/assets/maxgate.png')",
-       
+        "cover-picture": "url('./public/maxgate.png')",
       },
     },
   },

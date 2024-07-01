@@ -12,7 +12,7 @@ const FriendsPanel = () => {
       <div className="fixed w-1/3  top-0 left-0   bg-black ">
         <div className=" flex py-1.5 px-6 bg-gray-900 ">
           <img
-            src="src\assets\profile.png"
+            src="../public/profile.png"
             alt=" profile picture"
             className="rounded-full h-10"
             // onClick={() => dispatch({ type: "profile" })}
