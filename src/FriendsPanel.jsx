@@ -4,11 +4,11 @@ import FriendsList from "./FriendsList";
 import { useContext } from "react";
 import { FriendsContext } from "./App";
 const FriendsPanel = () => {
-  
+
   const { handleFriendsClick } = useContext(FriendsContext);
 
   return (
-    <div className="bg-gray-950 text-white text-sm  border-r border-gray-800 h-screen col-span-1 overflow-auto ">
+    <div className="bg-gray-950 text-white text-sm  border-r border-gray-800 h-screen col-span-1 overflow-auto w-full ">
       <div className="fixed w-1/3  top-0 left-0   bg-black ">
         <div className=" flex py-1.5 px-6 bg-gray-900 ">
           <img
