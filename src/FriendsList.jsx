@@ -1,4 +1,5 @@
 import { friends } from "./friends/friends";
+// import { useState } from "react";
 // import profilepix from "./assets/profile.png";
 const FriendsList = () => {
   return (

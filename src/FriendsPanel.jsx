@@ -1,11 +1,28 @@
 import propTypes from "prop-types";
+import { useEffect, useState } from "react";
+import { friends } from "./friends/friends";
 // import { useFriends } from "./context/FriendsContext";
-import FriendsList from "./FriendsList";
+// import FriendsList from "./FriendsList";
 import { useContext } from "react";
 import { FriendsContext } from "./App";
-const FriendsPanel = () => {
 
+// functions to filter friends
+
+const FriendsPanel = () => {
   const { handleFriendsClick } = useContext(FriendsContext);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredfriends, setfilteredfriends] = useState([]);
+
+  useEffect(() => {
+    const filterNames = () => {
+      return friends.filter((item) =>
+        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    };
+    const filteredData = filterNames(searchTerm);
+    setfilteredfriends(filteredData);
+    console.log(filteredfriends);
+  }, [searchTerm]);
 
   return (
     <div className="bg-gray-950 text-white text-sm  border-r border-gray-800 h-screen col-span-1 overflow-auto w-full ">
@@ -200,6 +217,8 @@ const FriendsPanel = () => {
                 id="voice-search"
                 className="bg-gray-50 border border-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:outline-none  block w-full ps-10 p-1.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-none"
                 placeholder="Search "
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 required
               />
             </div>
@@ -222,7 +241,31 @@ const FriendsPanel = () => {
           </form>
         </div>
       </div>
-      <FriendsList />
+
+      <div className="pt-24">
+         {filteredfriends.length > 0 && 
+          filteredfriends.map((searchTerm) => (
+            <div
+              className="flex border-b border-gray-900 hover:bg-gray-600 rounded-sm px-2 py-3"
+              key={searchTerm.id}
+            >
+              <img
+                src={searchTerm.image}
+                alt="friends name"
+                className="rounded-full h-12"
+              />
+
+              <div className="ml-6">
+                <h3 className=" text-gray-300 text-2xl font-semibold">
+                  {searchTerm.name}
+                </h3>
+
+                <h2 className=" text-gray-300 text-md">{searchTerm.message}</h2>
+              </div>
+            </div>
+          ))}
+      </div>
+      {/* <FriendsList /> */}
     </div>
   );
 };
