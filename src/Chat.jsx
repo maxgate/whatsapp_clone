@@ -1,5 +1,9 @@
+import { useState } from "react";
 import { friends } from "./friends/friends";
+
 function Chat() {
+const [activeFriend, setActiveFriend]= useState('');
+  
   return (
     <div className="bg-gray-800 text-white text-sm box-border  lg:w-full md:w-full h-lvh col-span-2 md:block sm:hidden">
       <div className="bg-gray-950 text-white text-lg lg:w-full md:w-full h-14 px-6 pt-3">
