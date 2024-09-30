@@ -1,7 +1,7 @@
 // import { useFriends } from "./context/FriendsContext";
 // import { FriendsProvider } from "./context/FriendsContext";
-// import Chat from "./Chat";
-import ChatPanel from "./ChatPanel";
+import Chat from "./Chat";
+// import ChatPanel from "./ChatPanel";
 import FriendsPanel from "./FriendsPanel";
 import Profile from "./Profile";
 // import Loader from "./Loader";
@@ -38,8 +38,8 @@ export default function App() {
           {profile && <Profile />}
           {friendsPanel && <FriendsPanel />}
         </div>
-        {<ChatPanel />}
-        {/* {<Chat />} */}
+        {/* {<ChatPanel />} */}
+        {<Chat />}
       </div>
     </FriendsContext.Provider>
   );

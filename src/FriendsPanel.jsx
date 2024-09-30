@@ -27,7 +27,7 @@ const FriendsPanel = () => {
   return (
     <div className="bg-gray-950 text-white text-sm  border-r border-gray-800 h-screen col-span-1 overflow-auto w-full ">
       <div className="fixed w-1/3  top-0 left-0   bg-black ">
-        <div className=" flex py-1.5 px-6 bg-gray-900 ">
+        <div className=" flex py-2.5 px-6 bg-gray-900 ">
           <img
             src="../profile.png"
             alt=" profile picture"
@@ -190,7 +190,7 @@ const FriendsPanel = () => {
         </div>
 
         <div className="py-2">
-          <form className="flex items-center   mx-6">
+          <form className="flex items-center mx-6">
             <label htmlFor="voice-search" className="sr-only">
               Search
             </label>
