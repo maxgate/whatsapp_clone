@@ -1,5 +1,3 @@
-// import { useFriends } from "./context/FriendsContext";
-// import { FriendsProvider } from "./context/FriendsContext";
 import Chat from "./Chat";
 import ChatPanel from "./ChatPanel";
 import FriendsPanel from "./FriendsPanel";
@@ -14,6 +12,7 @@ export default function App() {
   const [ChatingPanel, setChatPanel] = useState(true);
   const [profile, setProfile] = useState(false);
   const [friendsPanel, setFriendsPanel] = useState(true);
+  const [selectedfriend, setSelectedfriend] = useState();
 
   function handleChat() {
     setChat(true);
@@ -32,6 +31,8 @@ export default function App() {
     setProfile(!profile);
   }
 
+  console.log(selectedfriend);
+
   return (
     <FriendsContext.Provider
       value={{
@@ -48,11 +49,11 @@ export default function App() {
       <div className=" grid grid-cols-3 ">
         <div>
           {profile && <Profile />}
-          {friendsPanel && <FriendsPanel />}
+          {friendsPanel && <FriendsPanel selectedfriend={setSelectedfriend} />}
         </div>
 
         {ChatingPanel && <ChatPanel />}
-        {chat && <Chat />}
+        {chat && <Chat friend={selectedfriend} />}
       </div>
     </FriendsContext.Provider>
   );

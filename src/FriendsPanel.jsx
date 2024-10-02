@@ -8,12 +8,17 @@ import { FriendsContext } from "./App";
 
 // functions to filter friends
 
-const FriendsPanel = () => {
+const FriendsPanel = ({ selectedfriend }) => {
   const { handleFriendsClick } = useContext(FriendsContext);
   const { handleChatClick } = useContext(FriendsContext);
 
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredfriends, setfilteredfriends] = useState([]);
+
+  const selectFriend = (user) => {
+    handleChatClick();
+    selectedfriend(user);
+  };
 
   useEffect(() => {
     const filterNames = () => {
@@ -252,7 +257,7 @@ const FriendsPanel = () => {
             <div
               className="flex border-b border-gray-900 hover:bg-gray-600 rounded-sm px-2 py-3 cursor-pointer"
               key={searchTerm.id}
-              onClick={handleChatClick}
+              onClick={() => selectFriend(searchTerm)}
             >
               <img
                 src={searchTerm.image}
@@ -277,6 +282,7 @@ const FriendsPanel = () => {
 
 FriendsPanel.propTypes = {
   onhandleClick: propTypes.bool,
+  selectedfriend: propTypes.any,
 };
 
 export default FriendsPanel;

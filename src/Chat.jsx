@@ -1,26 +1,18 @@
-import { useState } from "react";
-import { friends } from "./friends/friends";
-import { useContext } from "react";
-import { FriendsContext } from "./App";
+import propTypes from "prop-types";
 
-function Chat() {
-  const { handlechatClick } = useContext(FriendsContext);
-
+function Chat({ friend }) {
   return (
     <div className="flex  bg-gray-950 text-white  box-border  lg:w-full md:w-full h-lvh col-span-2 md:block sm:hidden">
       <div className="bg-gray-800 text-white  lg:w-full md:w-full h-16  pt-2">
-        <div
-          className="flex  border-gray-900  rounded-sm   font-semibold "
-          
-        >
+        <div className="flex  border-gray-900  rounded-sm   font-semibold ">
           <div className="px-4 flex pb-2">
             <img
-              src="/profile.png"
+              src={friend?.image}
               alt="friends name"
               className="rounded-full h-10"
             />
             <div className="block ">
-              <span className="px-4 text-md font-bold">Max Vincent</span>
+              <span className="px-4 text-md font-bold">{friend?.name}</span>
 
               <span className="px-4 flex text-[14px] text-gray-400 ">
                 last seen today at 11:10{" "}
@@ -125,5 +117,9 @@ function Chat() {
     </div>
   );
 }
+
+Chat.propTypes = {
+  friend: propTypes.any,
+};
 
 export default Chat;
