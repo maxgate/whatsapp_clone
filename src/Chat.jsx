@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { friends } from "./friends/friends";
+import { useContext } from "react";
+import { FriendsContext } from "./App";
 
 function Chat() {
-  const [activeFriend, setActiveFriend] = useState("");
+  const { handlechatClick } = useContext(FriendsContext);
 
   return (
     <div className="flex  bg-gray-950 text-white  box-border  lg:w-full md:w-full h-lvh col-span-2 md:block sm:hidden">
       <div className="bg-gray-800 text-white  lg:w-full md:w-full h-16  pt-2">
         <div
           className="flex  border-gray-900  rounded-sm   font-semibold "
-          key={friends.id}
+          
         >
           <div className="px-4 flex pb-2">
             <img

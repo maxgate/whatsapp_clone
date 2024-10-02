@@ -10,17 +10,21 @@ import { FriendsContext } from "./App";
 
 const FriendsPanel = () => {
   const { handleFriendsClick } = useContext(FriendsContext);
+  const { handleChatClick } = useContext(FriendsContext);
+
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredfriends, setfilteredfriends] = useState([]);
 
   useEffect(() => {
     const filterNames = () => {
-      return friends.filter((item) =>
-        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+      return friends.filter(
+        (item) => item.name.toLowerCase().includes(searchTerm.toLowerCase()),
+        handleChatClick
       );
     };
     const filteredData = filterNames(searchTerm);
     setfilteredfriends(filteredData);
+
     console.log(filteredfriends);
   }, [searchTerm]);
 
@@ -243,11 +247,12 @@ const FriendsPanel = () => {
       </div>
 
       <div className="pt-24">
-         {filteredfriends.length > 0 && 
+        {filteredfriends.length > 0 &&
           filteredfriends.map((searchTerm) => (
             <div
-              className="flex border-b border-gray-900 hover:bg-gray-600 rounded-sm px-2 py-3"
+              className="flex border-b border-gray-900 hover:bg-gray-600 rounded-sm px-2 py-3 cursor-pointer"
               key={searchTerm.id}
+              onClick={handleChatClick}
             >
               <img
                 src={searchTerm.image}
